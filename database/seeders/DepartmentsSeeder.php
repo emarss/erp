@@ -20,7 +20,6 @@ class DepartmentsSeeder extends Seeder
             'description' => 'Offering Social Media Management & Marketing, Search Engine Optimisation and Content Creation',
             'slug' => Str::slug('Digital Marketing'),
             'added_by' => 1,
-            'organisation_id' => 1,
         ]);
     }
 }

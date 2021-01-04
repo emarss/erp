@@ -1,17 +1,68 @@
 .note-dialog .modal-dialog {
     z-index: 1050;
 }
-[dir=ltr] nav.drawer:not([data-simplebar]){
+
+[dir=ltr] nav.drawer:not([data-simplebar]) {
     overflow-y: scroll !important;
 }
-[dir=ltr] nav.drawer:not([data-simplebar])::-webkit-scrollbar-track{
-	background-color:rgb(37 54 74) !important;
+
+[dir=ltr] nav.drawer:not([data-simplebar])::-webkit-scrollbar-track {
+    background-color: rgb(37 54 74) !important;
 }
-[dir=ltr] nav.drawer:not([data-simplebar])::-webkit-scrollbar-thumb{
-	background-color: rgb(37 54 74) !important;
+
+[dir=ltr] nav.drawer:not([data-simplebar])::-webkit-scrollbar-thumb {
+    background-color: rgb(37 54 74) !important;
 }
+
 [dir=ltr] .invalid-feedback {
     margin-top: .25rem !important;
     font-size: 0.8rem !important;
     display: block !important;
+}
+
+.loading-modal {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.loading-modal div {
+    text-align: center;
+    width: calc(100vw - 266px);
+}
+
+.message-alert {
+    color: #ffffff;
+    background-color: #25364a;
+    border-color: #daebd1;
+}
+
+.feedback-container {
+    width: 100% !important;
+}
+
+
+/***** HELPERS ********/
+
+.opacity-0 {
+    opacity: 0 !important;
+}
+
+.opacity-02 {
+    opacity: 02 !important;
+}
+
+.opacity-04 {
+    opacity: 04 !important;
+}
+
+.opacity-06 {
+    opacity: 6 !important;
+}
+
+.opacity-08 {
+    opacity: 8 !important;
+}
+
+.opacity-1 {
+    opacity: 1 !important;
 }

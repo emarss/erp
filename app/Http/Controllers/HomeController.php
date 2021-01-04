@@ -47,6 +47,7 @@ class HomeController extends Controller
             'password' => $password,
             'status' => UserAccountStatus::ACTIVE
         ])) {
+            $request->session()->regenerate();
             return redirect()->intended('welcome');
         }
         return back()->with([

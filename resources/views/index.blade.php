@@ -3,7 +3,10 @@
 
 @endsection
 
-@section('content')
+@section('feedback')
     @livewire("feedback")
+@endsection
+
+@section('content')
 	@livewire($page)
 @endsection

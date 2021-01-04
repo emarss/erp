@@ -1,4 +1,6 @@
-<div class="container-fluid">
+@include("includes.loading_modal")
+
+<div class="container-fluid"  wire:loading.remove>
     <div class="col mb-4">
         <div class="row py-4 bg-white">
             <div class="col-lg-6">

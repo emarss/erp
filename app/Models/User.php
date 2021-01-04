@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+// use Yadahan\AuthenticationLog\AuthenticationLogable;
 
 /**
  *
@@ -21,7 +22,7 @@ use Illuminate\Notifications\Notifiable;
  */
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory, Notifiable, SoftDeletes; //AuthenticationLogable
 
 
     protected $fillable = [
@@ -52,7 +53,7 @@ class User extends Authenticatable
     }
 
     public function adder(){
-        return $this->belongsTo(User::class, 'added_by');
+        return $this->belongsTo(User::class, 'added_by')->withTrashed();
     }
 
 

@@ -7,7 +7,6 @@ use Livewire\Component;
 class Products extends Component
 {
 	public $action = 'products.index';
-	public $pageTitle = 'Products List';
 
 	public $description;
 	public $control_quantity;
@@ -26,12 +25,10 @@ class Products extends Component
     public function create()
     {
     	$this->action = 'products.create';
-    	$this->pageTitle = 'Add New Product';
     }
 
     public function index()
     {
     	$this->action = 'products.index';
-    	$this->pageTitle = 'Products List';
     }
 }

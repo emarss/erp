@@ -57,12 +57,10 @@
       <ul class="collapse" id="adminMenu">
         <li class="drawer-menu-item"><a href="">Properties</a></li>
         <li class="drawer-menu-item"><a href="">Employees</a></li>
-        <li class="drawer-menu-item"><a href="">Users</a></li>
-        <li class="drawer-menu-item"><a href="">Departments</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('users') }}">Users</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('departments') }}">Departments</a></li>
       </ul>
     </li>
-
-
 
 
     <li class="drawer-menu-item drawer-submenu">
@@ -71,10 +69,10 @@
         <span class="drawer-menu-text"> System</span>
       </a>
       <ul class="collapse" id="systemMenu">
-        <li class="drawer-menu-item"><a href="">Currencies</a></li>
-        <li class="drawer-menu-item"><a href="">User Roles</a></li>
-        <li class="drawer-menu-item"><a href="">Unit of Measures</a></li>
-        <li class="drawer-menu-item"><a href="">Payment Methods</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('currencies') }}">Currencies</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('user-roles') }}">User Roles</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('unit-of-measures') }}">Unit of Measures</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('payment-methods') }}">Payment Methods</a></li>
         <li class="drawer-menu-item"><a href="">Logs</a></li>
       </ul>
     </li>
@@ -114,7 +112,6 @@
         @csrf
       </form>
     </li>
-
   </ul>
 
 </nav>

@@ -21,4 +21,9 @@ class Currency extends Model
         'description',
         'added_by',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'added_by')->withTrashed();
+    }
 }

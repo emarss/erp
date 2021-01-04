@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string name
  * @property string description
  * @property string slug
- * @property integer organisation_id
  * @property integer added_by
  */
 class Department extends Model
@@ -24,7 +23,6 @@ class Department extends Model
         'description',
         'slug',
         'added_by',
-        'organisation_id',
     ];
 
 
