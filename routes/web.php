@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\CurrenciesController;
 use App\Http\Controllers\DepartmentsController;
+use App\Http\Controllers\EmployeesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentMethodsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UnitOfMeasuresController;
 use App\Http\Controllers\UserRolesController;
@@ -45,7 +47,13 @@ Route::get('/payment-methods', [PaymentMethodsController::class, 'indexPage'])
 Route::get('/departments', [DepartmentsController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('departments');
-Route::get('/users', [UsersController::class, 'indexPage'])
+Route::get('/users/page', [UsersController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('users');
+Route::get('/employees/page', [EmployeesController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('employees');
+Route::get('/properties/page', [PropertiesController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('properties');
 require __DIR__ . '/auth.php';

@@ -34,7 +34,7 @@
                                 <td> {{ $user->status ? "Active" : "Not Active" }} </th>
                                 <td> {{ $user->created_at->diffForHumans() }} </th>
                                 <td class="align-middle text-right">
-                                    <button wire:click="show({{ $user->id }})" class="btn btn-sm btn-info">Show</button>
+                                    <button wire:click="show({{ $user->id }})" class="btn btn-sm btn-primary">Show</button>
                                     <button wire:click="edit({{ $user->id }})" class="btn btn-sm btn-primary">Edit</button>
                                     <button wire:click="delete({{ $user->id }})" class="btn btn-sm btn-danger">Delete</button>
                                 </td>

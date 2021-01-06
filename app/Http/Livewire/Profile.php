@@ -14,6 +14,13 @@ class Profile extends Component
     public $first_name, $middle_name, $last_name, $email, $email_confirmation, $password, $password_confirmation, $current_password, $affiliation, $national_id, $phone, $next_of_kin, $address, $sex;
 
 
+    protected $listeners = [
+        'avatarUploaded' => 'avatarUploaded',
+        'avatarNotUploaded' => 'avatarNotUploaded',
+        'nationalIdImageUploaded' => 'nationalIdImageUploaded',
+        'nationalIdImageNotUploaded' => 'nationalIdImageNotUploaded',
+    ];
+
     public function mount()
     {
         $this->first_name = auth()->user()->first_name;
@@ -57,27 +64,42 @@ class Profile extends Component
     }
 
 
-    public function updateProfile()
+    public function editProfile()
     {
         $this->emit("hideFeedback");
     	$this->action = 'users.update-profile';
     }
 
 
-    public function updateDetails()
+    public function editDetails()
     {
+        $this->emit("hideFeedback");
     	$this->action = 'users.update-details';
     }
 
 
-    public function updatePassword()
+    public function changeAvatar()
+    {
+        $this->emit("hideFeedback");
+    	$this->action = 'users.update-avatar';
+    }
+
+
+    public function changeNationalIdImage()
+    {
+        $this->emit("hideFeedback");
+    	$this->action = 'users.update-national-id';
+    }
+
+
+    public function editPassword()
     {
         $this->emit("hideFeedback");
     	$this->action = 'users.update-password';
     }
 
 
-    public function updateEmail()
+    public function editEmail()
     {
         $this->emit("hideFeedback");
     	$this->action = 'users.update-email';
@@ -144,5 +166,29 @@ class Profile extends Component
         ]);
         $this->action = 'users.view-profile';
         $this->emit('successMessage', "Password updated successfully");
+    }
+
+    public function avatarUploaded()
+    {
+        $this->emit('successMessage', "Avatar updated successfully");
+        $this->action = 'users.view-profile';
+    }
+
+    public function avatarNotUploaded()
+    {
+        $this->emit('errorMessage', "Avatar updated successfully");
+        $this->action = 'users.view-profile';
+    }
+
+    public function nationalIdImageUploaded()
+    {
+        $this->emit('successMessage', "National Id Image updated successfully");
+        $this->action = 'users.view-profile';
+    }
+
+    public function nationalIdImageNotUploaded()
+    {
+        $this->emit('errorMessage', "National Id Image updated successfully");
+        $this->action = 'users.view-profile';
     }
 }

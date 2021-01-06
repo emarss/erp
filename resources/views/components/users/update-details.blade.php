@@ -8,29 +8,31 @@
         </div>
         <div class="card-body">
             <form>
-                <div class="form-group">
-                    <label for="first_name">First Name</label>
-                    <div class="input-group input-group--inline">
-                        <div class="input-group-addon">
-                            <i class="material-icons">person</i>
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="first_name">First Name</label>
+                        <div class="input-group input-group--inline">
+                            <div class="input-group-addon">
+                                <i class="material-icons">person</i>
+                            </div>
+                            <input wire:model="first_name"
+                                type="text" class="form-control" name="first_name"
+                                value="{{ auth()->user()->first_name }}">
                         </div>
-                        <input wire:model="first_name"
-                            type="text" class="form-control" name="first_name"
-                            value="{{ auth()->user()->first_name }}">
+                        @error('first_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
-                    @error('first_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
-                </div>
-                <div class="form-group">
-                    <label for="middle_name">Middle Name</label>
-                    <div class="input-group input-group--inline">
-                        <div class="input-group-addon">
-                            <i class="material-icons">person</i>
+                    <div class="form-group col-lg-6">
+                        <label for="middle_name">Middle Name</label>
+                        <div class="input-group input-group--inline">
+                            <div class="input-group-addon">
+                                <i class="material-icons">person</i>
+                            </div>
+                            <input wire:model="middle_name"
+                                type="text" class="form-control" name="middle_name"
+                                value="{{ auth()->user()->middle_name }}">
                         </div>
-                        <input wire:model="middle_name"
-                            type="text" class="form-control" name="middle_name"
-                            value="{{ auth()->user()->middle_name }}">
+                        @error('middle_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
-                    @error('middle_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group">
                     <label for="last_name">Last Name</label>

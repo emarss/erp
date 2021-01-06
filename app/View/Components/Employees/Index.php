@@ -2,10 +2,12 @@
 
 namespace App\View\Components\Employees;
 
+use App\Models\Employee;
 use Illuminate\View\Component;
 
 class Index extends Component
 {
+    public $employees;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class Index extends Component
      */
     public function __construct()
     {
-        //
+        $this->employees = Employee::all();
     }
 
     /**

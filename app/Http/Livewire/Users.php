@@ -14,11 +14,6 @@ class Users extends Component
     public $first_name, $last_name, $middle_name, $password, $password_confirmation, $role, $email, $currentUserId;
     public $departments = [];
 
-
-    // protected $rules = [
-    //     'departments' => 'required|numeric',
-    // ];
-
     public function render()
     {
         return view('livewire.users');

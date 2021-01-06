@@ -14,8 +14,8 @@
                 </div>
             </div>
             <div class="col-lg-6 d-md-flex align-items-center justify-content-end">
-                <button wire:click="updateDetails" class="btn btn-primary btn-sm mr-1">Update Details</button>
-                <button wire:click="updateProfile" class="btn btn-primary btn-sm">Update Profile</button>
+                <button wire:click="editDetails" class="btn btn-primary btn-sm mr-1">Edit Details</button>
+                <button wire:click="editProfile" class="btn btn-primary btn-sm">Edit Profile</button>
             </div>
         </div>
     </div>
@@ -90,14 +90,14 @@
                                     </div>
                                 </div>
                             </form>
-                            <button wire:click="updateDetails" class="btn btn-sm btn-primary">
-                                Update Details
+                            <button wire:click="editDetails" class="btn btn-sm btn-primary">
+                                Edit Details
                             </button>
-                            <button wire:click="updateEmail" class="btn btn-sm btn-primary">
-                                Update Email
+                            <button wire:click="editEmail" class="btn btn-sm btn-primary">
+                                Edit Email
                             </button>
-                            <button wire:click="updatePassword" class="btn btn-sm btn-primary">
-                                Update Password
+                            <button wire:click="editPassword" class="btn btn-sm btn-primary">
+                                Edit Password
                             </button>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <button wire:click="updateProfile" class="btn btn-sm btn-primary">Update Profile</button>
+                            <button wire:click="editProfile" class="btn btn-sm btn-primary">Edit Profile</button>
                         </div>
                     </div>
                 </div>
@@ -210,10 +210,10 @@
                             <h4 class="card-title">Avatar</h4>
                         </div>
                         <div class="card-body text-center">
-                            <img style="max-width: 50%" src="{{ auth()->user()->avatar() }}" alt="" class="img-fluid">
+                            <img style="max-width: 50%" src="{{ auth()->user()->avatar() }}" alt="" class="img-fluid rounded-circle">
                             <hr class="my-1">
                             <div>
-                                <button class="btn btn-white btn-sm">Change Avatar</button>
+                                <button wire:click="changeAvatar" class="btn btn-white btn-sm">Change Avatar</button>
                             </div>
                         </div>
                     </div>
@@ -222,10 +222,10 @@
                             <h4 class="card-title">National Id</h4>
                         </div>
                         <div class="card-body text-center">
-                            <img style="max-width: 50%" src="{{ auth()->user()->avatar() }}" alt="" class="img-fluid">
+                            <img style="max-width: 50%" src="{{ auth()->user()->nationalIdImage() }}" alt="" class="img-fluid">
                             <hr class="my-1">
                             <div>
-                                <button class="btn btn-white btn-sm">Re-upload ID</button>
+                                <button wire:click="changeNationalIdImage" class="btn btn-white btn-sm">Re-upload ID</button>
                             </div>
                         </div>
                     </div>

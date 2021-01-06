@@ -19,12 +19,16 @@ class CreateEmployeesTable extends Migration
             $table->string('middle_name')->nullable();
             $table->string('last_name');
             $table->string('position');
+            $table->tinyInteger('status')->default(1);
             $table->string('email')->nullable();
             $table->string('national_id')->nullable();
             $table->string('phone')->nullable();
             $table->string('next_of_kin')->nullable();
             $table->string('address')->nullable();
             $table->string('sex')->nullable();
+            $table->string('employment_history')->nullable();
+            $table->string('engagement_date')->nullable();
+            $table->string('termination_date')->nullable();
             $table->string('national_id_image')->nullable();
             $table->integer('added_by');
             $table->string('contract')->nullable();

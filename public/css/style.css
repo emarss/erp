@@ -31,9 +31,10 @@
 }
 
 .message-alert {
-    color: #ffffff;
-    background-color: #25364a;
-    border-color: #daebd1;
+    position: fixed !important;
+    right: 12px !important;
+    top: 8px !important;
+    z-index: 12 !important;
 }
 
 .feedback-container {

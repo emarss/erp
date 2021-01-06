@@ -8,6 +8,8 @@
             <h4 class="card-title font-weight-bold">
                 {{ $user->getFullName() }}
                 <button class="btn btn-primary btn-sm float-right" wire:click="index">Back</button>
+                <button wire:click="edit({{ $user->id }})" class="btn btn-sm btn-primary float-right mr-2">Edit</button>
+                <button wire:click="delete({{ $user->id }})" class="btn btn-sm btn-danger float-right mr-2">Delete</button>
             </h4>
         </div>
     </div>
@@ -210,7 +212,7 @@
                             <h4 class="card-title">National Id</h4>
                         </div>
                         <div class="card-body text-center">
-                            <img style="max-width: 50%" src="{{ $user->avatar() }}" alt="" class="img-fluid">
+                            <img style="max-width: 50%" src="{{ $user->nationalIdImage() }}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>

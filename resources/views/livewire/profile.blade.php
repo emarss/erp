@@ -9,5 +9,9 @@
         <x:users.update-email />
     @elseif($action == 'users.update-password')
         <x:users.update-password />
+    @elseif($action == 'users.update-avatar')
+        <x:users.update-avatar />
+    @elseif($action == 'users.update-national-id')
+        <x:users.update-national-id />
     @endif
 </div>

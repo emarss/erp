@@ -8,29 +8,31 @@
         </div>
         <div class="card-body">
             <form>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-group input-group--inline">
-                        <div class="input-group-addon">
-                            <i class="material-icons">lock</i>
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="email">Email</label>
+                        <div class="input-group input-group--inline">
+                            <div class="input-group-addon">
+                                <i class="material-icons">lock</i>
+                            </div>
+                            <input wire:model="email"
+                                type="text" class="form-control" name="email"
+                                placeholder="Email">
                         </div>
-                        <input wire:model="email"
-                            type="text" class="form-control" name="email"
-                            placeholder="Email">
+                        @error('email') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
-                    @error('email') <span class="invalid-feedback">{{ $message }}</span> @enderror
-                </div>
-                <div class="form-group">
-                    <label for="email_confirmation">Confirm Email</label>
-                    <div class="input-group input-group--inline">
-                        <div class="input-group-addon">
-                            <i class="material-icons">lock</i>
+                    <div class="form-group col-lg-6">
+                        <label for="email_confirmation">Confirm Email</label>
+                        <div class="input-group input-group--inline">
+                            <div class="input-group-addon">
+                                <i class="material-icons">lock</i>
+                            </div>
+                            <input wire:model="email_confirmation"
+                                type="text" class="form-control" name="email_confirmation"
+                                placeholder="Repeat Email">
                         </div>
-                        <input wire:model="email_confirmation"
-                            type="text" class="form-control" name="email_confirmation"
-                            placeholder="Repeat Email">
+                        @error('middle_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
-                    @error('middle_name') <span class="invalid-feedback">{{ $message }}</span> @enderror
                 </div>
             </form>
             <button wire:click="saveEmail" class="btn btn-sm btn-primary">Update Email</button>

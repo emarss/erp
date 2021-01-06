@@ -55,8 +55,8 @@
         <span class="drawer-menu-text"> Administration</span>
       </a>
       <ul class="collapse" id="adminMenu">
-        <li class="drawer-menu-item"><a href="">Properties</a></li>
-        <li class="drawer-menu-item"><a href="">Employees</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('properties') }}">Properties</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('employees') }}">Employees</a></li>
         <li class="drawer-menu-item"><a href="{{ route('users') }}">Users</a></li>
         <li class="drawer-menu-item"><a href="{{ route('departments') }}">Departments</a></li>
       </ul>

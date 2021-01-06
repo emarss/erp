@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string address
  * @property string sex
  * @property string national_id_image
+ * @property string avatar
  * @property integer user_id
  */
 class UserProfile extends Model
@@ -30,6 +31,7 @@ class UserProfile extends Model
         'address',
         'sex',
         'national_id_image',
+        'avatar',
         'user_id',
     ];
 }

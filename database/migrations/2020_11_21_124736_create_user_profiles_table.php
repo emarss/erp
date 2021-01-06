@@ -22,6 +22,7 @@ class CreateUserProfilesTable extends Migration
             $table->string('address')->nullable();
             $table->string('sex')->nullable();
             $table->string('national_id_image')->nullable();
+            $table->string('avatar')->nullable();
             $table->integer('user_id');
             $table->timestamps();
             $table->softDeletes();

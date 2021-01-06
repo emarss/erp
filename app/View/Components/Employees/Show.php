@@ -2,18 +2,20 @@
 
 namespace App\View\Components\Employees;
 
+use App\Models\Employee;
 use Illuminate\View\Component;
 
 class Show extends Component
 {
+    public $employee;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(int $currentEmployeeId)
     {
-        //
+        $this->employee = Employee::findOrFail($currentEmployeeId);
     }
 
     /**
