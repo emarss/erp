@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Property;
-use Illuminate\Support\Str;
 
 class Properties extends Component
 {
@@ -129,8 +128,8 @@ class Properties extends Component
             'unit_of_measure_id' => $this->unit_of_measure_id,
             'quantity' => $this->quantity,
             'value' => $this->value,
-            'added_by' => auth()->user()->id,
         ]);
+
 
         $property->departments()->sync($this->departments);
 

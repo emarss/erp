@@ -198,6 +198,25 @@
                         @endif
                     </div>
                 </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="card-title font-weight-bold">Meta Data</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <span>Updated</span>
+                            <span>{{ $employee->updated_at->diffForHumans() }}</span>
+                        </li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <span>Created</span>
+                            <span>{{ $employee->created_at->diffForHumans() }}</span>
+                        </li>
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between">
+                            <span>Added By</span>
+                            <span>{{ $employee->adder->getFullName() }}</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

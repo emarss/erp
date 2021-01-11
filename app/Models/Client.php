@@ -8,18 +8,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  *
- * @property string first_name
- * @property string middle_name
- * @property string last_name
- * @property string email
- * @property string national_id
- * @property string phone
- * @property string next_of_kin
- * @property string address
- * @property string sex
- * @property string national_id_image
- * @property integer added_by
- * @property string comments
+ * @property string $first_name
+ * @property string $middle_name
+ * @property string $last_name
+ * @property string $email
+ * @property string $national_id
+ * @property string $phone
+ * @property string $next_of_kin
+ * @property string $address
+ * @property string $sex
+ * @property string $national_id_image
+ * @property integer $added_by
+ * @property string $comments
  */
 class Client extends Model
 {

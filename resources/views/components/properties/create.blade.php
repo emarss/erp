@@ -95,6 +95,17 @@
                         @error('value') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="remarks">Remarks (Comments)</label>
+                    <div class="input-group input-group--inline">
+                        <div class="input-group-addon">
+                            <i class="material-icons">comments</i>
+                        </div>
+                        <input wire:model="remarks" type="text" class="form-control" name="remarks"
+                            placeholder="Remarks (Comments)">
+                    </div>
+                    @error('remarks') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                </div>
                 <hr class="opacity-0 my-1">
                 <div class="form-group">
                     <label for="departments">Department(s)</label>

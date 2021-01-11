@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  *
- * @property string title
- * @property string description
- * @property integer added_by
+ * @property string $title
+ * @property string $description
+ * @property integer $added_by
  */
 class PaymentMethod extends Model
 {

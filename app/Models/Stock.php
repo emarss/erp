@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  *
- * @property string description
- * @property int unit_of_measure_id
- * @property int control_quantity
- * @property int physical_quantity
- * @property int unit_buying_price
- * @property int unit_selling_price
- * @property string remarks
- * @property int department_id
- * @property int added_by
+ * @property string $description
+ * @property int $unit_of_measure_id
+ * @property int $control_quantity
+ * @property int $physical_quantity
+ * @property int $unit_buying_price
+ * @property int $unit_selling_price
+ * @property string $remarks
+ * @property int $department_id
+ * @property int $added_by
  *
  */
 class Stock extends Model
@@ -35,7 +35,7 @@ class Stock extends Model
         'added_by',
     ];
 
-    public function departments(){
+    public function department(){
         return $this->belongsTo(Department::class);
     }
     public function adder(){
@@ -43,6 +43,6 @@ class Stock extends Model
     }
 
     public function unitOfMeasure(){
-        return $this->belongsTo(UnitOfMeasure::class)->withTrashed();
+        return $this->belongsTo(UnitOfMeasure::class);
     }
 }

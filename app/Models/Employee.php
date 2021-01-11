@@ -8,23 +8,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  *
- * @property string first_name
- * @property string middle_name
- * @property string last_name
- * @property string position
- * @property string status
- * @property string email
- * @property string national_id
- * @property string phone
- * @property string next_of_kin
- * @property string address
- * @property string sex
- * @property string employment_history
- * @property string engagement_date
- * @property string termination_date
- * @property string national_id_image
- * @property integer added_by
- * @property string contract
+ * @property string $first_name
+ * @property string $middle_name
+ * @property string $last_name
+ * @property string $position
+ * @property string $status
+ * @property string $email
+ * @property string $national_id
+ * @property string $phone
+ * @property string $next_of_kin
+ * @property string $address
+ * @property string $sex
+ * @property string $employment_history
+ * @property string $engagement_date
+ * @property string $termination_date
+ * @property string $national_id_image
+ * @property integer $added_by
+ * @property string $contract
  */
 class Employee extends Model
 {

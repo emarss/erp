@@ -28,8 +28,8 @@
         <span class="drawer-menu-text"> Sales</span>
       </a>
       <ul class="collapse" id="salesMenu">
-        <li class="drawer-menu-item"><a href="">Sales</a></li>
-        <li class="drawer-menu-item"><a href="{{ route('products') }}">Products (Stock)</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('sales') }}">Sales</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('stocks') }}">Products (Stock)</a></li>
         <li class="drawer-menu-item"><a href="">Received Products</a></li>
         <li class="drawer-menu-item"><a href="">Suppliers</a></li>
         <li class="drawer-menu-item"><a href="">Clients</a></li>

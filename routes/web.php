@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentMethodsController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\StockController;
 use App\Http\Controllers\PropertiesController;
+use App\Http\Controllers\SalesController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UnitOfMeasuresController;
 use App\Http\Controllers\UserRolesController;
@@ -23,9 +24,6 @@ Route::get('/start/{department}', [HomeController::class, 'start'])
 Route::get('/dashboard', [HomeController::class, 'dashboard'])
     ->middleware(['auth', 'department_set'])
     ->name('dashboard');
-Route::get('/products', [ProductsController::class, 'indexPage'])
-    ->middleware(['auth', 'department_set'])
-    ->name('products');
 Route::get('/profile', [ProfileController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('profile');
@@ -56,4 +54,10 @@ Route::get('/employees/page', [EmployeesController::class, 'indexPage'])
 Route::get('/properties/page', [PropertiesController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('properties');
+Route::get('/stocks/page', [StockController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('stocks');
+Route::get('/sales/page', [SalesController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('sales');
 require __DIR__ . '/auth.php';

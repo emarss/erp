@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  *
- * @property integer department_id
- * @property integer default_currency
+ * @property integer $department_id
+ * @property integer $default_currency
  */
 class Setting extends Model
 {

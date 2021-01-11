@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  *
- * @property string name
- * @property string description
- * @property string slug
- * @property integer added_by
+ * @property string $name
+ * @property string $description
+ * @property string $slug
+ * @property integer $added_by
  */
 class Department extends Model
 {

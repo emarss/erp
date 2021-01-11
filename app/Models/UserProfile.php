@@ -9,15 +9,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  *
- * @property string affiliation
- * @property string national_id
- * @property string phone
- * @property string next_of_kin
- * @property string address
- * @property string sex
- * @property string national_id_image
- * @property string avatar
- * @property integer user_id
+ * @property string $affiliation
+ * @property string $national_id
+ * @property string $phone
+ * @property string $next_of_kin
+ * @property string $address
+ * @property string $sex
+ * @property string $national_id_image
+ * @property string $avatar
+ * @property integer $user_id
  */
 class UserProfile extends Model
 {

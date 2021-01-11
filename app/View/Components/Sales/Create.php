@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Products;
+namespace App\View\Components\Sales;
 
 use Illuminate\View\Component;
 
-class Index extends Component
+class Create extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('components.products.index');
+        return view('components.sales.create');
     }
 }

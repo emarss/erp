@@ -2271,8 +2271,10 @@ html [type=button] {
 
 [dir=ltr] .form-control:disabled,
 [dir=ltr] .form-control[readonly] {
-    background-color: #e9ecef;
-    opacity: 1
+    background-color: #f7f7f7;
+    opacity: 1;
+    border-radius: 0!important;
+    border-color: #fff !important;
 }
 
 [dir=ltr] select.form-control:not([size]):not([multiple]) {

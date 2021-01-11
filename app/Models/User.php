@@ -7,24 +7,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 // use Yadahan\AuthenticationLog\AuthenticationLogable;
 
 /**
  *
- * @property string first_name
- * @property string middle_name
- * @property string last_name
- * @property string email
- * @property string password
- * @property integer status
- * @property string role
- * @property integer added_by
+ * @property string $first_name
+ * @property string $middle_name
+ * @property string $last_name
+ * @property string $email
+ * @property string $password
+ * @property integer $status
+ * @property string $role
+ * @property integer $added_by
  */
-class User extends Authenticatable implements HasMedia
+class User extends Authenticatable
 {
-    use InteractsWithMedia;
     use HasFactory, Notifiable, SoftDeletes; //AuthenticationLogable
 
 

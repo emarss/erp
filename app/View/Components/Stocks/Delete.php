@@ -1,19 +1,21 @@
 <?php
 
-namespace App\View\Components\Products;
+namespace App\View\Components\Stocks;
 
 use Illuminate\View\Component;
 
-class Create extends Component
+class Delete extends Component
 {
+    public $stockDescription;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $stockDescription)
     {
-        //
+        $this->stockDescription = $stockDescription;
     }
 
     /**
@@ -23,6 +25,6 @@ class Create extends Component
      */
     public function render()
     {
-        return view('components.products.create');
+        return view('components.stocks.delete');
     }
 }
