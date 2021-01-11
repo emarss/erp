@@ -2,18 +2,20 @@
 
 namespace App\View\Components\Suppliers;
 
+use App\Models\Supplier;
 use Illuminate\View\Component;
 
 class Show extends Component
 {
+    public $supplier;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(int $currentSupplierId)
     {
-        //
+        $this->supplier = Supplier::findOrFail($currentSupplierId);
     }
 
     /**

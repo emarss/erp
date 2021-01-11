@@ -102,7 +102,7 @@
                         @error('email') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="Phone">Phone</label>
+                        <label for="phone">Phone</label>
                         <div class="input-group input-group--inline">
                             <div class="input-group-addon">
                                 <i class="material-icons">local_phone</i>
@@ -110,7 +110,7 @@
                             <input wire:model="phone" type="text" class="form-control" name="phone"
                                 placeholder="Phone">
                         </div>
-                        @error('Phone') <span class="invalid-feedback">{{ $message }}</span> @enderror
+                        @error('phone') <span class="invalid-feedback">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="form-group">

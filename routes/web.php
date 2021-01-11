@@ -11,6 +11,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\SuppliersController;
 use App\Http\Controllers\UnitOfMeasuresController;
 use App\Http\Controllers\UserRolesController;
 use App\Http\Controllers\UsersController;
@@ -60,4 +61,7 @@ Route::get('/stocks/page', [StockController::class, 'indexPage'])
 Route::get('/sales/page', [SalesController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('sales');
+Route::get('/suppliers/page', [SuppliersController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('suppliers');
 require __DIR__ . '/auth.php';

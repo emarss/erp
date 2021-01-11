@@ -1,13 +1,11 @@
 <?php
 
-namespace App\View\Components\Suppliers;
+namespace App\View\Components\Clients;
 
-use App\Models\Supplier;
 use Illuminate\View\Component;
 
-class Index extends Component
+class Delete extends Component
 {
-    public $suppliers;
     /**
      * Create a new component instance.
      *
@@ -15,7 +13,7 @@ class Index extends Component
      */
     public function __construct()
     {
-        $this->suppliers = Supplier::all();
+        //
     }
 
     /**
@@ -25,6 +23,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('components.suppliers.index');
+        return view('components.clients.delete');
     }
 }
