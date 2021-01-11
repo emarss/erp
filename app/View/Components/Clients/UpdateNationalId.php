@@ -5,17 +5,17 @@ namespace App\View\Components\Clients;
 use App\Models\Client;
 use Illuminate\View\Component;
 
-class Index extends Component
+class UpdateNationalId extends Component
 {
-    public $clients;
+    public $client;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(int $currentClientId)
     {
-        $this->clients = Client::all();
+        $this->client = Client::findOrFail($currentClientId);
     }
 
     /**
@@ -25,6 +25,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('components.clients.index');
+        return view('components.clients.update-national-id');
     }
 }

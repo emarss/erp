@@ -33,13 +33,13 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-lg-6">
-                        <label for="phone_number">Phone Number</label>
+                        <label for="phone">Phone Number</label>
                         <div class="input-group input-group--inline">
                             <div class="input-group-addon">
                                 <i class="material-icons">local_phone</i>
                             </div>
-                            <input readonly value="{{ $supplier->phone_number }}" type="text" class="form-control"
-                                name="phone_number" placeholder="Supplier's Phone Number">
+                            <input readonly value="{{ $supplier->phone }}" type="text" class="form-control"
+                                name="phone" placeholder="Supplier's Phone Number">
                         </div>
                     </div>
                     <div class="form-group col-lg-6">

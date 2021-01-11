@@ -2,18 +2,20 @@
 
 namespace App\View\Components\Clients;
 
+use App\Models\Client;
 use Illuminate\View\Component;
 
 class Show extends Component
 {
+    public $client;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(int $currentClientId)
     {
-        //
+        $this->client = Client::findOrFail($currentClientId);
     }
 
     /**

@@ -1,13 +1,11 @@
 <?php
 
-namespace App\View\Components\Clients;
+namespace App\View\Components\ReceivedProducts;
 
-use App\Models\Client;
 use Illuminate\View\Component;
 
-class Index extends Component
+class Edit extends Component
 {
-    public $clients;
     /**
      * Create a new component instance.
      *
@@ -15,7 +13,7 @@ class Index extends Component
      */
     public function __construct()
     {
-        $this->clients = Client::all();
+        //
     }
 
     /**
@@ -25,6 +23,6 @@ class Index extends Component
      */
     public function render()
     {
-        return view('components.clients.index');
+        return view('components.received-products.edit');
     }
 }

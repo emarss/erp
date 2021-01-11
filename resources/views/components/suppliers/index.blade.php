@@ -30,7 +30,7 @@
                                 <td> {{ $supplier->id }} </th>
                                 <td> {{ $supplier->name }} </th>
                                 <td> {{ $supplier->email }} </th>
-                                <td> {{ $supplier->phone_number }} </th>
+                                <td> {{ $supplier->phone }} </th>
                                 <td> {{ $supplier->city }} </th>
                                 <td> {{ $supplier->created_at->diffForHumans() }} </th>
                                 <td class="align-middle text-right">

@@ -8,13 +8,13 @@ use Livewire\Component;
 class Suppliers extends Component
 {
     public $action = 'suppliers.index';
-    public $name, $remarks, $email, $phone_number, $address, $city, $country, $added_by, $supplierName, $currentSupplierId;
+    public $name, $remarks, $email, $phone, $address, $city, $country, $added_by, $supplierName, $currentSupplierId;
 
     protected $rules = [
         'name' => "required|string",
         'remarks' => "nullable|string",
         'email' => "nullable|string",
-        'phone_number' => "nullable|string",
+        'phone' => "nullable|string",
         'address' => "nullable|string",
         'city' => "nullable|string",
         'country' => "nullable|string",
@@ -33,7 +33,7 @@ class Suppliers extends Component
         $this->name = $supplier->name;
         $this->remarks = $supplier->remarks;
         $this->email = $supplier->email;
-        $this->phone_number = $supplier->phone_number;
+        $this->phone = $supplier->phone;
         $this->address = $supplier->address;
         $this->city = $supplier->city;
         $this->country = $supplier->country;
@@ -80,7 +80,7 @@ class Suppliers extends Component
             'name' => $this->name,
             'remarks' => $this->remarks,
             'email' => $this->email,
-            'phone_number' => $this->phone_number,
+            'phone' => $this->phone,
             'address' => $this->address,
             'city' => $this->city,
             'country' => $this->country,
@@ -114,7 +114,7 @@ class Suppliers extends Component
             'name' => $this->name,
             'remarks' => $this->remarks,
             'email' => $this->email,
-            'phone_number' => $this->phone_number,
+            'phone' => $this->phone,
             'address' => $this->address,
             'city' => $this->city,
             'country' => $this->country,
@@ -130,6 +130,6 @@ class Suppliers extends Component
     public function resetFormFields()
     {
         $this->resetErrorBag();
-        $this->name = $this->remarks = $this->email = $this->phone_number = $this->address = $this->city = $this->country = $this->added_by = $this->supplierName = $this->currentSupplierId = null;
+        $this->name = $this->remarks = $this->email = $this->phone = $this->address = $this->city = $this->country = $this->added_by = $this->supplierName = $this->currentSupplierId = null;
     }
 }

@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $address
  * @property string $sex
  * @property string $national_id_image
+ * @property integer $department_id
  * @property integer $added_by
  * @property string $comments
  */
@@ -36,7 +37,29 @@ class Client extends Model
         'address',
         'sex',
         'national_id_image',
+        'department_id',
         'added_by',
         'comments',
     ];
+
+    public function department(){
+        return $this->belongsTo(Department::class);
+    }
+    public function adder(){
+        return $this->belongsTo(User::class, 'added_by')->withTrashed();
+    }
+
+    public function getFullName(){
+        return $this->first_name . " ".
+            $this->middle_name . " ".
+            $this->last_name;
+    }
+
+    public function nationalIdImage()
+    {
+        if(strlen($this->national_id_image) == 0){
+            return "/images/placeholder.png";
+        }
+        return "/" .$this->national_id_image;
+    }
 }

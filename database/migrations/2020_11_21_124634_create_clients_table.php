@@ -25,6 +25,7 @@ class CreateClientsTable extends Migration
             $table->string('address')->nullable();
             $table->string('sex')->nullable();
             $table->string('national_id_image')->nullable();
+            $table->integer('department_id');
             $table->integer('added_by');
             $table->string('comments')->nullable();
             $table->timestamps();

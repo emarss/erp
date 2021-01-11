@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class Delete extends Component
 {
+    public $clientName;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $clientName)
     {
-        //
+        $this->clientName = $clientName;
     }
 
     /**

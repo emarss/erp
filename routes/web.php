@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\CurrenciesController;
 use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\EmployeesController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\PaymentMethodsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\PropertiesController;
+use App\Http\Controllers\ReceivedProductsController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SuppliersController;
@@ -64,4 +66,10 @@ Route::get('/sales/page', [SalesController::class, 'indexPage'])
 Route::get('/suppliers/page', [SuppliersController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('suppliers');
+Route::get('/clients/page', [ClientsController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('clients');
+Route::get('/received-products/page', [ReceivedProductsController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('received-products');
 require __DIR__ . '/auth.php';
