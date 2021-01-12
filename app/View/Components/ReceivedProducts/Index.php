@@ -2,10 +2,12 @@
 
 namespace App\View\Components\ReceivedProducts;
 
+use App\Models\ReceivedProduct;
 use Illuminate\View\Component;
 
 class Index extends Component
 {
+    public $receivedProducts;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class Index extends Component
      */
     public function __construct()
     {
-        //
+        $this->receivedProducts = ReceivedProduct::all();
     }
 
     /**

@@ -165,9 +165,8 @@ class Sales extends Component
     public function resetFormFields()
     {
         $this->resetErrorBag();
-        $this->stock_id = $this->profit = $this->added_by = $this->currentSaleId = 0;
+        $this->stock_id = $this->profit = $this->added_by = $this->currentSaleId = $this->product = null;
         $this->unit_selling_price = $this->total_selling_price = $this->actual_selling_price = $this->discount = 0;
         $this->quantity = 1;
-        $this->product = null;
     }
 }

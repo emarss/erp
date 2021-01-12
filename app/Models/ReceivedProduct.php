@@ -9,9 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @property int $date
  * @property int $quantity
- * @property int $product_id
+ * @property int $stock_id
+ * @property double $unit_selling_price
  * @property int $supplier_id
- * @property string $comments
+ * @property string $remarks
  * @property int $department_id
  * @property int $added_by
  */
@@ -22,9 +23,10 @@ class ReceivedProduct extends Model
     protected $fillable = [
         'date',
         'quantity',
-        'product_id',
+        'stock_id',
+        'unit_selling_price',
         'supplier_id',
-        'comments',
+        'remarks',
         'department_id',
         'added_by',
     ];
@@ -38,7 +40,7 @@ class ReceivedProduct extends Model
     }
 
     public function product(){
-        return $this->belongsTo(Stock::class);
+        return $this->belongsTo(Stock::class, 'stock_id');
     }
 
     public function adder(){

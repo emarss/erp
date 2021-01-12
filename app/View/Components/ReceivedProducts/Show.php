@@ -2,18 +2,20 @@
 
 namespace App\View\Components\ReceivedProducts;
 
+use App\Models\ReceivedProduct;
 use Illuminate\View\Component;
 
 class Show extends Component
 {
+    public $receivedProduct;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(int $currentReceivedProductId)
     {
-        //
+        $this->receivedProduct = ReceivedProduct::findOrFail($currentReceivedProductId);
     }
 
     /**

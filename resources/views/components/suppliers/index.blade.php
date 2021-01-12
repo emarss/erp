@@ -1,6 +1,4 @@
-<div>
-    <!-- I begin to speak only when I am certain what I will say is not better left unsaid - Cato the Younger -->
-</div>@include("includes.loading_modal")
+@include("includes.loading_modal")
 
 <div class="container-fluid"  wire:loading.remove>
     <div class="card">
