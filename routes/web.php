@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\ReceivedProductsController;
+use App\Http\Controllers\RequisationsController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SuppliersController;
@@ -72,4 +73,7 @@ Route::get('/clients/page', [ClientsController::class, 'indexPage'])
 Route::get('/received-products/page', [ReceivedProductsController::class, 'indexPage'])
     ->middleware(['auth', 'department_set'])
     ->name('received-products');
+Route::get('/requisations/page', [RequisationsController::class, 'indexPage'])
+    ->middleware(['auth', 'department_set'])
+    ->name('requisations');
 require __DIR__ . '/auth.php';

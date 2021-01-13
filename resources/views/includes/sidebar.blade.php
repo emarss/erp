@@ -42,9 +42,9 @@
         <span class="drawer-menu-text"> Finances</span>
       </a>
       <ul class="collapse" id="financesMenu">
-        <li class="drawer-menu-item"><a href="">Quotations</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('quotations') }}">Quotations</a></li>
         <li class="drawer-menu-item"><a href="">Invoices</a></li>
-        <li class="drawer-menu-item"><a href="">Requisitions</a></li>
+        <li class="drawer-menu-item"><a href="{{ route('requisations') }}">Requisitions</a></li>
       </ul>
     </li>
 
